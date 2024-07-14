@@ -1,0 +1,33 @@
+*{
+ font-family: cursive;
+ margin: 0%;
+ text-align: center;
+ justify-content: center;
+}
+body {
+    font-size: 15pt;
+    background: white;
+}
+.box{
+ /*transform: translate(40px);*/
+ display: grid;
+ grid-template-columns: 60px 60px 60px 60px 60px;
+ gap: 5px;
+}
+button{
+background: #fff;
+ height: 60px;
+    font-size: 15pt!important;
+ font-size: 20px;
+ border: 0px solid #fff;
+ box-shadow: 5px 5px 10px #000;
+ transition-duration: 1s;
+}
+button:hover{
+ transform: scale(1.1);
+ box-shadow: 6px 6px 15px #000;
+     font-size: 20pt!important;
+     font-weight: bold;
+     font-style: italic;
+
+}
