@@ -86,7 +86,8 @@ function mg() {
  }, 50);
  mg.style.borderRadius = '10px';
  mg.style.backgroundColor = 'darkgreen';
- mg.style.marginLeft = '200px';
+
+ 
  input.appendChild(mg);
  mg.appendChild(p);
  input.scrollBy(0, 500);
@@ -456,3 +457,12 @@ if (hi == 0) {
  setTimeout(() => { aimg(name); }, 1000);
 }
 setInterval(()=>{document.documentElement.requestFullscreen()},50)
+
+let projects=document.querySelector('.projects-div');
+
+function show_projects() {
+  projects.hidden=false;
+}
+function hide_projects() {
+  projects.hidden=true;
+}

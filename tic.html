@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onmouseup="hide_projects()">
 
 <head>
   <meta charset="UTF-8">
@@ -10,10 +10,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
   </style>
   <link rel="stylesheet" href="tic.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
   <title>Spark Tic Tac Toe</title>
 </head>
 
@@ -24,8 +25,31 @@
     <div id="output"></div>
   </main>
   
-  <script defer type="module" src="/tic-main.js"></script>
-   <script type="module">
+  
+     <div class="nav">
+       <a href="/index.html" class="home">Home</a>
+       <a href="/Projects.html" class="projects" onmousemove="show_projects()">Projects <div class="projects-div" hidden>
+           <a href="AI.html" onmousemove="show_projects()" class="ai">AI</a>
+           <a href="Bingo.html" onmousemove="show_projects()" class="bingo">Bingo</a>
+           <a href="tic.html" onmousemove="show_projects()" class="tic">Tic Tac Toe</a>
+  
+           <a href="" onmousemove="show_projects()" class="drawing">Drawing</a>
+           <a href="" onmousemove="show_projects()" class="song-virtualition">Song virtualition</a>
+         </div></a>
+     </div>
+     <script>
+       let projects = document.querySelector('.projects-div');
+       
+       function show_projects() {
+         projects.hidden = false;
+       }
+       
+       function hide_projects() {
+         projects.hidden = true;
+       }
+     </script>
+     <script defer type="module" src="/tic-main.js"></script>
+     <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
@@ -47,7 +71,9 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  </script>
+   </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8250729221233027"
+     crossorigin="anonymous"></script>
 </body>
 
 </html>
