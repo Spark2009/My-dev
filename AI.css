@@ -1,3 +1,10 @@
+* {
+  font-size: 15px;
+  font-family: cursive;
+  text-decoration: none;
+
+  /*overflow: hidden;*/
+}
 body{
 
  background-size: cover;
@@ -49,6 +56,7 @@ p {
   height: 390px;
   overflow: scroll;
   backdrop-filter: blur(15px);
+  top: 20px;
 }
 
 @media screen and (min-width:500px) {
@@ -57,8 +65,17 @@ p {
   width: 92%;
  }
  #input{
-  width: 98%;
- }}
+  width: 98%
+  
+ }
+  .me{ 
+    margin-left: 500px;
+  }
+  .ai{
+    padding-right: 60px ;
+    width: fit-content;
+  }
+}
 label{
  padding: 10px;
  background-color: #0C1FED;
@@ -77,12 +94,14 @@ label{
 .me{
   transition-duration: 0.2s;
   box-shadow: 5px 5px 10px #000;
-  overflow: scroll;
+  margin-left: 200px;
 
 }
 .ai{
   transition-duration: 0.2s;
   box-shadow: 5px 5px 10px #000;
+  align-self: right;
+  
 }
 ul{
  list-style-type: decimal;
@@ -98,4 +117,35 @@ iframe{
 }
 .ifr_btn{
  position: fixed;
+}
+
+.nav{
+ background-color: darkslateblue;
+ position: absolute;
+ width: 100%;
+ left:0px;
+ top: 0px;
+}
+.nav a{
+  color:white;
+  padding: 5px;
+
+}
+.projects-div{
+  width:100px;
+  height: 150px;
+  background: black;
+  position: absolute;
+  left:20px;
+  overflow-y: scroll;
+}
+
+.projects-div a:hover{
+  background: #fff;
+  color: black;
+
+}
+.projects-div a{
+    display: block;
+    padding: 5px;
 }

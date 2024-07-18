@@ -3,16 +3,23 @@
  margin: 0%;
  text-align: center;
  justify-content: center;
+ font-family: cursive;
+ text-decoration: none;
+ margin: 0px;
+ overflow: hidden;
 }
 body {
     font-size: 15pt;
     background: white;
+    margin-top:20px; 
+    
 }
 .box{
  /*transform: translate(40px);*/
  display: grid;
  grid-template-columns: 60px 60px 60px 60px 60px;
  gap: 5px;
+ height: 330px;
 }
 button{
 background: #fff;
@@ -30,4 +37,38 @@ button:hover{
      font-weight: bold;
      font-style: italic;
 
+}
+.nav{
+ background-color: darkslateblue;
+ position: absolute;
+ width: 100%;
+ left:0px;
+ top: 0px;
+ text-align: left;
+ font-size: 15px;
+}
+.nav a{
+  color:white;
+  padding: 5px;
+
+}
+.projects-div{
+  width:100px;
+  height: 150px;
+  background: black;
+  left:20px;
+  overflow-y: scroll;
+    position: fixed;
+
+}
+
+.projects-div a:hover{
+  background: #fff;
+  color: black;
+
+}
+.projects-div a{
+    display: block;
+    padding: 5px;
+    text-align: left;
 }

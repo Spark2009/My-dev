@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>sgin up Web</title>
+</head>
+
+<body>
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        <form action="">
+          <h2>sgin up</h2>
+          <div class="inputbox">
+            <input type="email" class="email" required>
+            <label for="">Email</label>
+          </div>
+          <div class="inputbox">
+            <input type="password" class="password" required>
+            <label for="">Password</label>
+          </div>
+          <div class="forget">
+            <label>
+              <p>sign up with google 
+            </label></p>
+
+          </div>
+          <button type="submit">register</button>
+          <div class="register">
+            <p>already have a account <a href="/Login.html">Login </a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="/sgin up.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBwUlv9eICqJgDcIFavtkl2d_4gtLQsyHk",
+    authDomain: "spark-fc9b8.firebaseapp.com",
+    projectId: "spark-fc9b8",
+    storageBucket: "spark-fc9b8.appspot.com",
+    messagingSenderId: "281329329937",
+    appId: "1:281329329937:web:622f96c2300a509d6bceb0",
+    measurementId: "G-0XPKMVX46E"
+  };
+firebase.initializeApp(firebaseConfig);
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+   </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8250729221233027"
+     crossorigin="anonymous"></script>
+     
+</body>
+
+</html>

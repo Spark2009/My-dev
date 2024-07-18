@@ -91,6 +91,8 @@ main {
   justify-content: center;
 }
 
+
+
 @media (orientation: landscape) {
   main {
     width: 70vh;
@@ -111,4 +113,37 @@ main {
   main {
     transform: translate(-50%, calc(-50% * .75));
   }
+}
+
+*{
+  font-size: 15px;
+  font-family: cursive;
+  text-decoration: none;
+  margin: 0px;
+  overflow: hidden;
+}
+.nav{
+ background-color: darkslateblue;
+}
+.nav a{
+  color:white;
+    padding: 5px;
+}
+.projects-div{
+  width:100px;
+  height: 150px;
+  background: black;
+  position: absolute;
+  left:20px;
+  overflow-y: scroll;
+}
+
+.projects-div a:hover{
+  background: #fff;
+  color: black;
+
+}
+.projects-div a{
+    display: block;
+    padding: 5px;
 }

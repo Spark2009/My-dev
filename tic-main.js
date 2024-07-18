@@ -1,5 +1,7 @@
 import { findBestMove } from './tic-minimax.js';
 
+
+
 const cross = Object.assign(new Image(), {
   src: './cross.svg',
   id: 'icon',
