@@ -7,12 +7,12 @@ submit.addEventListener('click',(e)=>{
   e.preventDefault();
   try {
     let user =  firebase.auth().signInWithEmailAndPassword(email.value, password.value);
-    alert('Successfully login')
+    alert('Successfully login');
   } catch (e) {
     alert('Please enter correct email & password');
   }
 
-  console.log(user)
+
   email.value="";
   password.value="";
 })
@@ -42,3 +42,20 @@ google.addEventListener('click',()=>{
     // ...
   });
 })
+let auth = firebase.auth();
+  auth.onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/v8/firebase.User
+    var uid = user.uid;
+            window.location.href="/index.html";
+
+    
+    // ...
+  } else {
+    // User is signed out
+    // ...
+    //document.querySelector('.login').click();    
+    
+  }
+});

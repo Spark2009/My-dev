@@ -6,7 +6,9 @@ submit.addEventListener('submit',(e)=>{
   e.preventDefault();
   try {
     let user =  firebase.auth().createUserWithEmailAndPassword(email.value, password.value);
-    alert('user');
+    setTimeout(()=>{
+      window.location.href='/Login.html';
+    },1000);
   } catch (e) {
     alert('please enter correct info');
   }
