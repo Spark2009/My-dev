@@ -21,7 +21,9 @@ let auth=firebase.auth();
           document.querySelector('.user-img').src=photoUrl;
           
         }
-    
+    if (!user.emailVerify) {
+document.querySelector('.email-vfy').hidden=false;
+    }
     // ...
   } else {
     // User is signed out
@@ -39,3 +41,19 @@ document.querySelector('.signout').addEventListener('click',(e)=>{
   console.log('nit')
 });
 })
+function later() {
+  document.querySelector('.email-vfy').hidden=true;
+  // Tab to edit
+}
+function verify() {
+  // Tab to edit
+  firebase.auth().currentUser.sendEmailVerification()
+  .then(() => {
+    // Email verification sent!
+    // ...
+    alert('Please go G-mail app and verify your email');
+  document.querySelector('.email-vfy').hidden=true;
+  });
+  alert('Please go G-mail app and verify your email');
+  document.querySelector('.email-vfy').hidden=true;
+}

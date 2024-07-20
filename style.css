@@ -39,3 +39,33 @@
   position: absolute;
   right: 10px;
 }
+.email-vfy{
+  width:300px;
+  height: 200px;
+  border: 1px solid #000;
+  position: absolute;
+  top: 30%;
+  left: 20px ;
+}
+.email-vfy button{
+  width: 80px;
+  background-color: #FFDC16;
+  border: 0.5px solid #000;
+  
+}
+.later {
+  position: absolute;
+  top: 170px;
+  left: 30px
+}
+.verify {
+  position: absolute;
+  top: 170px;
+  right:30px
+}
+.email-vfy p{
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
