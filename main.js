@@ -21,7 +21,7 @@ let auth=firebase.auth();
           document.querySelector('.user-img').src=user.photoURL;
           
         }
-    if (user.emailVerified) {
+    if (!user.emailVerified) {
 document.querySelector('.email-vfy').hidden=false;
     }
     // ...
