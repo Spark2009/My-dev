@@ -72,3 +72,11 @@ button:hover{
     padding: 5px;
     text-align: left;
 }
+.user-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 500%;
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+}

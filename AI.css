@@ -149,3 +149,12 @@ iframe{
     display: block;
     padding: 5px;
 }
+
+.user-img{
+  width: 20px;
+  height: 20px;
+  border-radius: 500%;
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+}

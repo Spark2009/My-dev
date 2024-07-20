@@ -17,11 +17,11 @@ let auth=firebase.auth();
         document.querySelector('.login').hidden=true;    
         document.querySelector('.sign-up').hidden=true;
         document.querySelector('.user-img').hidden=false;
-        if (user.photoUrl) {
-          document.querySelector('.user-img').src=photoUrl;
+        if (user.photoURL) {
+          document.querySelector('.user-img').src=user.photoURL;
           
         }
-    if (!user.emailVerify) {
+    if (!user.emailVerified) {
 document.querySelector('.email-vfy').hidden=false;
     }
     // ...

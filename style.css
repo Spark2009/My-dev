@@ -42,10 +42,11 @@
 .email-vfy{
   width:300px;
   height: 200px;
-  border: 1px solid #000;
+  border-radius: 10px;
   position: absolute;
   top: 30%;
   left: 20px ;
+  box-shadow: 0px 0px 500px #000;
 }
 .email-vfy button{
   width: 80px;
