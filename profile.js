@@ -4,7 +4,7 @@ let name = document.querySelector('.name'),
 phone=document.querySelector('.phone')
 ,gender=document.querySelector('.gender'),uid,users;
 
-function submit(e) {
+document.querySelector('form').addEventListener('submit',(e)=>{
     e.preventDefault()
         db.collection("users").doc(uid).set({
           name:name.value,
@@ -17,8 +17,8 @@ function submit(e) {
         alert('your profile is created');
       setTimeout(()=>{window.location.href='/index.html';},5000)
       
-}
-auth.onAuthStateChanged((user) => {
+})
+ auth.onAuthStateChanged((user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/v8/firebase.User
