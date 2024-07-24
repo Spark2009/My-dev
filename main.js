@@ -1,4 +1,4 @@
-
+let db=firebase.firestore();
 
 let projects=document.querySelector('.projects-div');
 
@@ -14,16 +14,41 @@ let auth=firebase.auth();
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/v8/firebase.User
     var uid = user.uid;
+    db.collection("users").doc(uid).update({
+      emailVerified:user.emailVerified
+    })
+   db.collection("users").doc(uid).get().then((doc)=>{
+     if (doc.exists) {
+      let data= doc.data();
+      if (!data.profile) {
+        window.location.href='/profile.html'; 
+      } else {
+        if (!data.emailVerified) {
+  document.querySelector('.email-vfy').hidden = false;
+}
+      }
+      
+     }else {
+                  db.collection("users").doc(uid).set({
+               profile: false
+             })
+             .then(() => {
+               console.log("Document written with ID: ");
+             })
+             .catch((error) => {
+               console.error("Error adding document: ", error);
+             });
+     }
+     
+   })
+
         document.querySelector('.login').hidden=true;    
         document.querySelector('.sign-up').hidden=true;
         document.querySelector('.user-img').hidden=false;
         if (user.photoURL) {
           document.querySelector('.user-img').src=user.photoURL;
-          
         }
-    if (!user.emailVerified) {
-document.querySelector('.email-vfy').hidden=false;
-    }
+    
     // ...
   } else {
     // User is signed out
