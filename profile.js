@@ -1,15 +1,15 @@
 let db=firebase.firestore();
 let auth=firebase.auth();
 let name = document.querySelector('.name'),
-phone=document.querySelector('.phone'),uid,users;
+phone=document.querySelector('.phone')
+,gender=document.querySelector('.gender'),uid,users;
 
-
-function submit() {
-  // Tab to edit
-
+function submit(e) {
+    e.preventDefault()
         db.collection("users").doc(uid).set({
           name:name.value,
           phoneNum:phone.value,
+          gender:gender.value,
           emailVerified:users.emailVerified
         })
         
