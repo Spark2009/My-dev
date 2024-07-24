@@ -10,6 +10,7 @@ document.querySelector('.submi').addEventListener('click',(e)=>{
           name:name.value,
           phoneNum:phone.value,
           gender:gender.value,
+            email:users.email,
           emailVerified:users.emailVerified
         })
         
