@@ -4,7 +4,7 @@ let name = document.querySelector('.name'),
 phone=document.querySelector('.phone')
 ,gender=document.querySelector('.gender'),uid,users;
 
-document.querySelector('form').addEventListener('submit',(e)=>{
+document.querySelector('.submi').addEventListener('click',(e)=>{
     e.preventDefault()
         db.collection("users").doc(uid).set({
           name:name.value,
