@@ -1,6 +1,6 @@
 let email=document.querySelector('.email');
 let password=document.querySelector('.password');
-let submit=document.querySelector('.submit');
+let submit=document.querySelector('.submit'),forget=document.querySelector('.forget');
 let google=document.querySelector('.loginwithgoogle');
 
 submit.addEventListener('click',(e)=>{
@@ -59,3 +59,11 @@ let auth = firebase.auth();
     
   }
 });
+forget.addEventListener('click',()=>{
+  if (!email.value=='') {
+    firebase.auth().sendPasswordResetEmail(email.value);
+    alert('Go your email and enter new password');
+  } else {
+    alert('Please enter correct email');
+  }
+})

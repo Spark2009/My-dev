@@ -30,7 +30,7 @@ let auth=firebase.auth();
       
      }else {
                   db.collection("users").doc(uid).set({
-               profile: false
+               profile: false,
              })
              .then(() => {
                console.log("Document written with ID: ");
@@ -53,7 +53,7 @@ let auth=firebase.auth();
   } else {
     // User is signed out
     // ...
-    document.querySelector('.login').click();    
+   // document.querySelector('.login').click();    
     
   }
 });

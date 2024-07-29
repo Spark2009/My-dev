@@ -4,7 +4,10 @@
   text-decoration: none;
   margin: 0px;
   overflow: hidden;
+
+
 }
+body{ background: #130122;}
 .nav{
  background-color: darkslateblue;
  height: 20px;
@@ -69,4 +72,25 @@
   position: absolute;
   top: 20px;
   left: 10px;
+}
+.start_body{
+margin-top: 50px;
+}
+p,span{
+  font-size: 20px;
+  text-align: center;
+  color: darkgray;
+}
+.getstart
+{margin-top: 5px;
+  padding: 10px 15px;
+  background: #130122;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  
+}
+.getstart a{
+  color: darkgray;
+  font-size: 20px
 }
