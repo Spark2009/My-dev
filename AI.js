@@ -9,18 +9,18 @@ let ifr = document.querySelector('.ifr');
 let iframe = document.querySelector('iframe');
 let ifr_btn = document.querySelector('.ifr_btn');
 var date, tname;
-
+var finalTranscripts = '';
 //setInterval(()=>{
 //   date=new Date();
 //    time=(date.getHours()+':'+date.getMinutes()+':'+date.getSeconds());
 //  },1000);
-//let speech=new SpeechSynthesisUtterance();
-//speech.lang=="en";
+let speech=new SpeechSynthesisUtterance();
+speech.lang="hi";
 let voices = [];
-//window.speechSynthesis.onvoiceschanged=() =>{
-//  voices=window.speechSynthesis.getVoices();
-//*speech.voice =voices[5];
-//}
+window.speechSynthesis.onvoiceschanged=() =>{
+  voices=window.speechSynthesis.getVoices();
+speech.voice = voices[5];
+}
 var hi = localStorage.getItem('Come');
 var name_input = false;
 var password_input = false;
@@ -51,6 +51,10 @@ if (Bgpos == null) {
 
 
 }
+
+	
+
+
 fOr.addEventListener('submit', (event) => {
  event.preventDefault();
  ait();
@@ -112,8 +116,8 @@ function aimg(text) {
  p.innerHTML = 'Typeing.....';
  setTimeout(() => {
   p.innerHTML = text;
-  //speech.text=text;
-  //window.speechSynthesis.speak(speech);
+  speech.text=text;
+  window.speechSynthesis.speak(speech);
   aimg.style.transform = 'translateX(0%)';
 
   input.scrollBy(0, 500);
@@ -126,7 +130,7 @@ function aimg(text) {
 */
 function ait() {
  // Tab to edit
- var meg = document.getElementById('type').value;
+ var meg =document.getElementById('type').value;
  meg = String(meg).toUpperCase();
  var sEt = String(meg).slice(0, 8);
  if (!meg == '') {
@@ -134,7 +138,7 @@ function ait() {
   if (meg == 'HI' && hi == 0) {
    aimg('Hello');
    setTimeout(() => {
-    aimg('I am AI');
+    aimg('I am AI (by Pratham vig)');
    }, 1000)
    setTimeout(() => {
     aimg('Who are you ?');
@@ -386,6 +390,11 @@ function ait() {
   } else if (meg == 'LOGOUT' || meg == '/19') {
    localStorage.clear();
    window.location.reload();
+  } else if (meg == 'BEY') {
+    aimg('bey');
+    setTimeout(()=>{
+  window.history.back();
+    },1000)
   } else if (meg == 'HELP' || meg == '/') {
    aimg('Ai command:-')
    var ul = document.createElement('ul');
