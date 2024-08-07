@@ -1,4 +1,5 @@
 let email=document.querySelector('.email');
+
 let password=document.querySelector('.password');
 let submit=document.querySelector('.submit'),forget=document.querySelector('.forget');
 let google=document.querySelector('.loginwithgoogle');

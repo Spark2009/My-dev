@@ -14,6 +14,7 @@ var finalTranscripts = '';
 //   date=new Date();
 //    time=(date.getHours()+':'+date.getMinutes()+':'+date.getSeconds());
 //  },1000);
+
 let speech=new SpeechSynthesisUtterance();
 speech.lang="hi";
 let voices = [];

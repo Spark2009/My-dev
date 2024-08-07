@@ -1,4 +1,26 @@
 let projects = document.querySelector('.projects-div');
+let ai=document.querySelectorAll('.project');
+
+
+window.addEventListener('scroll',()=>{   let int=new IntersectionObserver((entery,obj)=>{
+
+
+     entery.forEach((ent)=>{
+    let ele=ent.target;
+    if (ent.intersectionRatio==1) {
+      ele.classList.add('animate');
+      
+    } else {
+      ele.classList.remove('animate');
+    }
+     })
+   })
+  
+   int.observe(ai[0]);
+   int.observe(ai[1]);
+   int.observe(ai[2]);
+})
+
 
 function show_projects() {
   projects.hidden = false;
@@ -24,3 +46,4 @@ auth.onAuthStateChanged((user) => {
 
   }
 });
+

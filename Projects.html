@@ -23,66 +23,70 @@
         <a href="" onmousemove="show_projects()" class="drawing">Drawing</a>
         <a href="" onmousemove="show_projects()" class="song-virtualition">Song virtualition</a>
       </div></a>
-       <a href="#" class="user"><img src="/images (7)~2.png" alt="" class="user-img" hid></a>
- </div>
+    <a href="#" class="user"><img src="/images (7)~2.png" alt="" class="user-img" hid></a>
+  </div>
   </div>
   <div class="projects">
-    <div class="project-ai">
+    <div class="project-ai project">
       <div class="ai">
-          <img src="/ai-s.png" alt="AI image">
-  <div class="ai-info">
-    <h3>AI</h3>
-<a href="/AI.html" class="ai-btn">Lets Talk</a>
-  </div>
+        <img src="/ai-s.png" alt="AI image">
+        <div class="ai-info">
+          <h3>AI</h3>
+          <a href="/AI.html" class="ai-btn">Lets Talk</a>
+        </div>
       </div>
     </div>
-    <div class="project-bingo">
-     <div class="bingo">
+    <div class="project-bingo project">
+      <div class="bingo">
         <img src="/bingo.png" alt="bingo">
-<div>
-   <h3>Bingo</h3>
- <a href="/Bingo.html" class="bingo-btn">Lets play</a>
-</div>
-     </div>
+        <div>
+          <h3>Bingo</h3>
+          <a href="/Bingo.html" class="bingo-btn">Lets play</a>
+        </div>
+      </div>
     </div>
-    <div class="project-tic">
-     <div class="tic">
+    <div class="project-tic project">
+      <div class="tic">
         <img src="/tic.png" alt="tic tac teo">
-<div>
-   <h3>Tic Tac Toe</h3>
- <a href="/tic.html" class="tic-btn">Lets play</a>
-</div>
-     </div>
+        <div>
+          <h3>Tic Tac Toe</h3>
+          <a href="/tic.html" class="tic-btn">Lets play</a>
+        </div>
+      </div>
     </div>
   </div>
-     <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 
-<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="/Projects.js">
+    /Projects.js
+  </script>
   <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBwUlv9eICqJgDcIFavtkl2d_4gtLQsyHk",
-    authDomain: "spark-fc9b8.firebaseapp.com",
-    projectId: "spark-fc9b8",
-    storageBucket: "spark-fc9b8.appspot.com",
-    messagingSenderId: "281329329937",
-    appId: "1:281329329937:web:622f96c2300a509d6bceb0",
-    measurementId: "G-0XPKMVX46E"
-  };
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBwUlv9eICqJgDcIFavtkl2d_4gtLQsyHk",
+      authDomain: "spark-fc9b8.firebaseapp.com",
+      projectId: "spark-fc9b8",
+      storageBucket: "spark-fc9b8.appspot.com",
+      messagingSenderId: "281329329937",
+      appId: "1:281329329937:web:622f96c2300a509d6bceb0",
+      measurementId: "G-0XPKMVX46E"
+    };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-   </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8250729221233027"
-     crossorigin="anonymous"></script>
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8250729221233027" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

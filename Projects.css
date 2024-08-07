@@ -3,6 +3,8 @@
   font-family: cursive;
   text-decoration: none;
   margin: 0px;
+    transition-duration: 0.8s;
+  
  
 }
 body{
@@ -67,8 +69,9 @@ body{
   left:5%;
   top:30%;
   box-shadow: 0 0 20px #000;
-
+  transform: translate(1000%);
 }
+
 .ai-info,.bingo div,.tic div{
   background: #000000CC;
   color: darkgray;
@@ -80,12 +83,18 @@ body{
   height: 160px;
   border-radius: 10px;
   box-shadow: 0 0 20px #000;
+  transform: translate(-1000%);
+  overflow: hidden;
 }
+
 .ai-info h3 ,.bingo h3,.tic div h3{
   font-size: 20px;
   position: absolute;
   left: 8%;
   top: 15px;
+  transition-delay: 0.7s;
+  transform: translateY(-100px);
+
 }
 .ai-btn ,.bingo-btn,.tic-btn{
   color:#fff;
@@ -96,15 +105,27 @@ background: #1267FF;
 padding: 5px;
 border-radius: 5px;
 box-shadow: 0 0 10px #000;
+transition-delay: 0.8s;
+transform: scale(0);
+
 }
 .bingo img{
   left:60%;
+  transform: translate(-1000%);
 }
 .bingo div{
   left: 5%;
+  transform: translate(1000%);
+  
 }
+.animate  img,.animate a,.animate div div,
+.animate div  h3{
+  transform: scale(1);
+}
+
 @media screen and (min-width: 500px) {
   .project-ai img,.bingo img,.tic img{
+
     width: 25%;
     top:10%;
   }
