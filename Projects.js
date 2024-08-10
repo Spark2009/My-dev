@@ -1,9 +1,7 @@
 let projects = document.querySelector('.projects-div');
 let ai=document.querySelectorAll('.project');
 
-
 window.addEventListener('scroll',()=>{   let int=new IntersectionObserver((entery,obj)=>{
-
 
      entery.forEach((ent)=>{
     let ele=ent.target;
@@ -29,14 +27,14 @@ function show_projects() {
 function hide_projects() {
   projects.hidden = true;
 }
-let auth = firebase.auth();
-auth.onAuthStateChanged((user) => {
-  if (user) {
+
+
+  if (user_info) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/v8/firebase.User
-    var uid = user.uid;
-    if (user.photoURL) {
-      document.querySelector('.user-img').src = user.photoURL;
+    var uid = user_info.uid;
+    if (user_info.photoURL) {
+      document.querySelector('.user-img').src = user_info.photoURL;
 
     }
     // ...
@@ -45,5 +43,5 @@ auth.onAuthStateChanged((user) => {
     // ...
 
   }
-});
+
 

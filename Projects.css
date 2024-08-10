@@ -4,8 +4,7 @@
   text-decoration: none;
   margin: 0px;
     transition-duration: 0.8s;
-  
- 
+overflow-x: hidden;  
 }
 body{
   overflow: scroll;
@@ -23,7 +22,8 @@ body{
   background: black;
   position: absolute;
   left:20px;
-  overflow-y: scroll;
+overflow-y: scroll;
+  
 }
 
 .projects-div a:hover{

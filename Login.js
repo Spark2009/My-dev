@@ -1,5 +1,5 @@
 let email=document.querySelector('.email');
-
+console.log(test)
 let password=document.querySelector('.password');
 let submit=document.querySelector('.submit'),forget=document.querySelector('.forget');
 let google=document.querySelector('.loginwithgoogle');
@@ -7,7 +7,7 @@ let google=document.querySelector('.loginwithgoogle');
 submit.addEventListener('click',(e)=>{
   e.preventDefault();
   try {
-    let user =  firebase.auth().signInWithEmailAndPassword(email.value, password.value);
+    let user =  auth.signInWithEmailAndPassword(email.value, password.value);
     alert('Successfully login');
   } catch (e) {
     alert('Please enter correct email & password');
@@ -20,7 +20,7 @@ submit.addEventListener('click',(e)=>{
 
 google.addEventListener('click',()=>{
   var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth()
+  auth
   .signInWithPopup(provider)
   .then((result) => {
     /** @type {firebase.auth.OAuthCredential} */
@@ -43,12 +43,12 @@ google.addEventListener('click',()=>{
     // ...
   });
 })
-let auth = firebase.auth();
-  auth.onAuthStateChanged((user) => {
-  if (user) {
+
+
+  if (user_info) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/v8/firebase.User
-    var uid = user.uid;
+
             window.location.href="/index.html";
 
     
@@ -59,10 +59,10 @@ let auth = firebase.auth();
     //document.querySelector('.login').click();    
     
   }
-});
+
 forget.addEventListener('click',()=>{
   if (!email.value=='') {
-    firebase.auth().sendPasswordResetEmail(email.value);
+    auth.sendPasswordResetEmail(email.value);
     alert('Go your email and enter new password');
   } else {
     alert('Please enter correct email');

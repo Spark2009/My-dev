@@ -1,0 +1,65 @@
+* {
+  font-size: 15px;
+  font-family: cursive;
+  text-decoration: none;
+  margin: 0px;
+  overflow: hidden;
+
+
+}
+
+.nav{
+ background-color: darkslateblue;
+ height: 20px;
+}
+.nav a{
+  color:white;
+    padding: 5px;
+}
+.projects-div{
+  width:100px;
+  height: 150px;
+  background: black;
+  position: absolute;
+  left:20px;
+  overflow-y: scroll;
+}
+
+.projects-div a:hover{
+  background: #fff;
+  color: black;
+
+}
+.projects-div a{
+    display: block;
+    padding: 5px;
+}
+.user-img{
+  width: 20px;
+  height: 20px;
+  border-radius: 500%;
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+}
+.ai{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  left: 80%;
+  top: 80%;
+}
+.mic{
+  width: 25%;
+  height: 25%;
+  background: #E10909;
+  border-radius: 50%;
+  padding: 10px;
+  position: relative;
+  left: 25%;
+  top: 25%;
+  
+}
+.mic img{
+ width: 100%;
+}

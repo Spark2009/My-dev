@@ -1,20 +1,17 @@
-let db = firebase.firestore();
-let auth = firebase.auth(),
-  ref = firebase.storage().ref();
 let name = document.querySelector('.name'),
   phone = document.querySelector('.phone'),
   gender = document.querySelector('.gender'),
-  uid, users, photo = document.querySelector('.photo-file'),
-  
-  
+   photo = document.querySelector('.photo-file');
+   name.value = user_info.displayName;
+    phone.value = user_info.phoneNumber;
 
-
+  
 
 img.addEventListener('click', () => { photo.click() })
 photo.addEventListener('change', (e) => {
   let file = e.target.files[0];
-  ref.child('img/' + users.displayName).put(file).then(() => {
-    ref.child('img/' + users.displayName).getDownloadURL().then((url) => {
+  ref.child('img/' + user_info.displayName).put(file).then(() => {
+    ref.child('img/' + user_info.displayName).getDownloadURL().then((url) => {
       img.src = url;
       photoURL = url;
 
@@ -27,7 +24,7 @@ document.querySelector('.submit').addEventListener('click', (e) => {
   
   try {
 
-    db.collection("users").doc(uid).set({
+    user_doc.set({
       name: name.value,
       phoneNum: phone.value,
       gender: gender.value,
@@ -43,18 +40,4 @@ document.querySelector('.submit').addEventListener('click', (e) => {
 
 
 
-})
-auth.onAuthStateChanged((user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/v8/firebase.User
-    users = user;
-    uid = user.uid;
-    name.value = user.displayName;
-    phone.value = user.phoneNumber;
-
-
-
-
-  }
 })
